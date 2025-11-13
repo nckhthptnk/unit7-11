@@ -111,7 +111,8 @@
             progressData: null,
             vocabQuizAnswers: {},
             currentQuizIndex: 0,
-            vocabSubSection: 'flashcards' // 'flashcards' or 'quiz'
+            vocabSubSection: 'flashcards', // 'flashcards' or 'quiz'
+            currentGrammarIndex: 0
         };
         
         const vocabularyData = [
@@ -720,62 +721,94 @@
             }
         ];
         
-        const readingText = `Modern <span class="highlight">technology</span> has revolutionized education through online learning <span class="highlight">platforms</span>. Students can now access <span class="highlight">courses</span> from top universities <span class="highlight">without</span> leaving their homes. These <span class="highlight">digital</span> learning environments allow learners to study at their own <span class="highlight">pace</span>, making education more flexible than ever before.
+        const readingText = `Parent-teen conflicts are a natural part of adolescent development as teenagers seek greater <u><strong>"independence"</strong></u> from their families. During this period, young people begin to form their own identities and challenge parental authority, which often leads to disagreements about rules, expectations, and personal choices. <strong>[I]</strong> Research shows that most conflicts occur over everyday issues like household chores, curfews, and academic performance rather than serious behavioral problems.
 
-Educational <span class="highlight">apps</span> and <span class="highlight">software</span> provide interactive lessons that help students <span class="highlight">concentrate</span> better. <span class="highlight">Instructors</span> can <span class="highlight">create</span> engaging content using multimedia tools, while students can <span class="highlight">interact</span> with materials through videos, quizzes, and simulations. Many platforms offer <span class="highlight">bite-sized</span> lessons that fit perfectly into busy schedules.
+A recent study involving 200 families found that <u><strong>parents and teenagers</strong></u> argue an average of eight times per week, with mothers reporting slightly more frequent disagreements than fathers. <strong>[II]</strong> The study revealed that many teens prefer to remain silent during conflicts rather than express <u><strong>their</strong></u> true feelings and opinions. This communication pattern can create misunderstandings and prevent families from addressing underlying issues effectively.
 
-Online education also provides access to vast amounts of <span class="highlight">information</span> and <span class="highlight">materials</span>. Students can read <span class="highlight">e-books</span>, watch <span class="highlight">lectures</span>, and complete <span class="highlight">assignments</span> using various <span class="highlight">devices</span>. <span class="highlight">Professional</span> <span class="highlight">developers</span> continuously <span class="highlight">update</span> these learning systems to improve user experience. This <span class="highlight">way</span> of learning has become the new <span class="highlight">normal</span>, especially after recent global changes. Students can <span class="highlight">prepare</span> for their future careers by gaining <span class="highlight">real</span> skills through online <span class="highlight">teaching</span> methods. The flexibility to learn <span class="highlight">whatever</span> subject interests them most makes online education incredibly valuable for <span class="highlight">long-life</span> learning goals.`;
+However, it's important not to <u><strong>"dismiss"</strong></u> these conflicts as merely negative experiences. <strong>[III]</strong> When handled constructively, disagreements can actually strengthen family relationships and help teenagers develop important life skills. <u><strong>"Healthy communication, trust, and problem-solving skills are key to resolving disagreements."</strong></u> Parents who listen actively and respect their teenagers' perspectives while maintaining appropriate boundaries tend to have more positive outcomes. <strong>[IV]</strong>
+
+Experts recommend that families establish regular communication routines and create safe spaces for open dialogue. By approaching conflicts with patience and understanding, both parents and teenagers can learn from these experiences and build stronger, more respectful relationships that will benefit them throughout their lives.`;
         
         const readingQuestions = [
             {
-                question: "What has revolutionized education according to the text?",
+                question: "1. The word \"independence\" in paragraph 1 is CLOSEST in meaning to ________________.",
                 options: [
-                    "Traditional classrooms",
-                    "Modern technology and online learning platforms",
-                    "Printed textbooks",
-                    "Face-to-face lectures only"
+                    "self-reliance",
+                    "attention", 
+                    "patience",
+                    "guidance"
+                ],
+                correct: 0
+            },
+            {
+                question: "2. What does the word \"their\" in paragraph 2 refer to?",
+                options: [
+                    "parents'",
+                    "teenagers'",
+                    "disagreements'",
+                    "teachers'"
                 ],
                 correct: 1
             },
             {
-                question: "What advantage do digital learning environments offer students?",
+                question: "3. The word \"dismiss\" in paragraph 3 is OPPOSITE in meaning to ________________.",
                 options: [
-                    "Fixed study schedules",
-                    "Limited course options", 
-                    "Study at their own pace",
-                    "Only weekend classes"
+                    "ignore",
+                    "refuse",
+                    "respect",
+                    "confuse"
                 ],
                 correct: 2
             },
             {
-                question: "What type of lessons do many platforms offer for busy schedules?",
+                question: "4. In which paragraph does the writer explain how parents and teens can manage conflicts?",
                 options: [
-                    "Long lectures",
-                    "Bite-sized lessons",
-                    "Full-day courses",
-                    "Weekend workshops"
+                    "Paragraph 1",
+                    "Paragraph 2",
+                    "Paragraph 3",
+                    "Paragraph 4"
+                ],
+                correct: 3
+            },
+            {
+                question: "5. Where in the passage does the following sentence best fit?\n\"This can hide deeper emotions and prevent healthy communication.\"",
+                options: [
+                    "[I]",
+                    "[II]",
+                    "[III]",
+                    "[IV]"
                 ],
                 correct: 1
             },
             {
-                question: "Who continuously updates learning systems?",
+                question: "6. Which of the following is TRUE according to the passage?",
                 options: [
-                    "Students",
-                    "Parents",
-                    "Professional developers",
-                    "Government officials"
+                    "Conflicts between parents and teens always harm relationships.",
+                    "Most parent-teen arguments are about money and school grades.",
+                    "The study showed fathers argue more with teens than mothers.",
+                    "Teens in the study often kept silent instead of expressing opinions."
                 ],
-                correct: 2
+                correct: 3
             },
             {
-                question: "What makes online education valuable for long-life learning?",
+                question: "7. Which of the following best paraphrases the underlined sentence in paragraph 3?\n\"Healthy communication, trust, and problem-solving skills are key to resolving disagreements.\"",
                 options: [
-                    "High costs",
-                    "Limited subjects",
-                    "Flexibility to learn whatever subject interests them most",
-                    "Strict time requirements"
+                    "Understanding, honesty, and cooperation help families handle conflicts effectively.",
+                    "Not until parents are healthy that unnecessary arguments can be solved.",
+                    "Disagreements can be solved only if teenagers completely obey their parents.",
+                    "Good communication makes all family problems disappear immediately."
                 ],
-                correct: 2
+                correct: 0
+            },
+            {
+                question: "8. Which can be inferred from the passage?",
+                options: [
+                    "Parents should try to stop all conflicts between themselves and their children.",
+                    "School and teachers play insignificant roles in helping solve family conflicts.",
+                    "Teenagers' emotional problems are mainly caused by their school performance.",
+                    "Open and respectful communication can turn conflicts into chances for growth."
+                ],
+                correct: 3
             }
         ];
         
@@ -889,6 +922,9 @@ Online education also provides access to vast amounts of <span class="highlight"
                     if (record.current_vocab_index !== undefined) {
                         appState.currentVocabIndex = record.current_vocab_index;
                     }
+                    if (record.current_grammar_index !== undefined) {
+                        appState.currentGrammarIndex = record.current_grammar_index;
+                    }
                     if (record.completed_vocab_cards) {
                         appState.completedVocabCards = new Set(record.completed_vocab_cards.split(',').filter(x => x));
                     }
@@ -937,6 +973,7 @@ Online education also provides access to vast amounts of <span class="highlight"
                     reading_progress: readingProgress,
                     grammar_progress: grammarProgress,
                     vocab_quiz_progress: vocabQuizProgress,
+                    current_grammar_index: appState.currentGrammarIndex,
                     completed_vocab_cards: Array.from(appState.completedVocabCards).join(','),
                     reading_answers: JSON.stringify(appState.readingAnswers),
                     grammar_answers: JSON.stringify(appState.grammarAnswers),
@@ -1502,11 +1539,13 @@ Online education also provides access to vast amounts of <span class="highlight"
                          style="background-color: ${config.surface_color || defaultConfig.surface_color};">
                         <h2 class="font-bold mb-6" 
                             style="font-size: ${baseSize * 1.5}px; color: ${config.primary_action_color || defaultConfig.primary_action_color};">
-                            📖 Bài đọc: Online Learning Technology
+                            📖 Bài đọc: Parent-Teen Conflicts
                         </h2>
-                        <div class="leading-relaxed" 
+                        <div class="leading-relaxed space-y-4" 
                              style="font-size: ${baseSize}px; color: ${config.text_color || defaultConfig.text_color}; line-height: 1.8;">
-                            ${readingText}
+                            ${readingText.split('\n\n').map(paragraph => 
+                                `<p class="mb-4">${paragraph}</p>`
+                            ).join('')}
                         </div>
                     </div>
                     
@@ -1519,9 +1558,9 @@ Online education also provides access to vast amounts of <span class="highlight"
                         ${readingQuestions.map((q, idx) => `
                             <div class="mb-6 p-4 rounded-lg" 
                                  style="background-color: ${config.background_color || defaultConfig.background_color};">
-                                <div class="font-semibold mb-3" 
+                                <div class="font-semibold mb-3 whitespace-pre-line" 
                                      style="font-size: ${baseSize}px; color: ${config.text_color || defaultConfig.text_color};">
-                                    ${idx + 1}. ${q.question}
+                                    ${q.question}
                                 </div>
                                 <div class="space-y-2">
                                     ${q.options.map((opt, optIdx) => {
@@ -1733,48 +1772,98 @@ Online education also provides access to vast amounts of <span class="highlight"
             }
             
             if (appState.currentGrammarTopic === 'comprehensive') {
+                const question = comprehensiveTest[appState.currentGrammarIndex];
+                
                 return `
-                    <div class="p-6 sm:p-8 rounded-xl shadow-lg" 
-                         style="background-color: ${config.surface_color || defaultConfig.surface_color};">
-                        <h3 class="font-bold mb-6" 
-                            style="font-size: ${baseSize * 1.5}px; color: ${config.primary_action_color || defaultConfig.primary_action_color};">
-                            📝 Bài tập tổng hợp (30 câu)
-                        </h3>
-                        ${comprehensiveTest.map((q, idx) => `
-                            <div class="mb-6 p-4 rounded-lg" 
-                                 style="background-color: ${config.background_color || defaultConfig.background_color};">
-                                <div class="font-semibold mb-3" 
-                                     style="font-size: ${baseSize}px; color: ${config.text_color || defaultConfig.text_color};">
-                                    ${idx + 1}. ${q.question}
-                                </div>
-                                <div class="space-y-2">
-                                    ${q.options.map((opt, optIdx) => {
-                                        const isSelected = appState.grammarAnswers[idx] === optIdx;
-                                        const isCorrect = optIdx === q.correct;
-                                        const showResult = appState.grammarAnswers[idx] !== undefined;
-                                        
-                                        let bgColor = config.surface_color || defaultConfig.surface_color;
-                                        if (showResult) {
-                                            if (isCorrect) bgColor = '#10b981';
-                                            else if (isSelected) bgColor = '#ef4444';
-                                        } else if (isSelected) {
-                                            bgColor = config.primary_action_color || defaultConfig.primary_action_color;
-                                        }
-                                        
-                                        return `
-                                            <button onclick="selectGrammarAnswer(${idx}, ${optIdx})"
-                                                    ${showResult ? 'disabled' : ''}
-                                                    class="w-full text-left p-3 rounded-lg transition-colors"
-                                                    style="background-color: ${bgColor}; color: ${showResult || isSelected ? 'white' : (config.text_color || defaultConfig.text_color)}; font-size: ${baseSize * 0.875}px; border: 2px solid ${isSelected ? (config.primary_action_color || defaultConfig.primary_action_color) : 'transparent'};">
-                                                ${String.fromCharCode(65 + optIdx)}. ${opt}
-                                                ${showResult && isCorrect ? ' ✓' : ''}
-                                                ${showResult && isSelected && !isCorrect ? ' ✗' : ''}
-                                            </button>
-                                        `;
-                                    }).join('')}
+                    <div class="max-w-2xl mx-auto">
+                        <div class="mb-6 text-center">
+                            <div style="font-size: ${baseSize * 0.875}px; color: ${config.text_color || defaultConfig.text_color}; opacity: 0.7;">
+                                Câu ${appState.currentGrammarIndex + 1} / ${comprehensiveTest.length}
+                            </div>
+                            <div class="w-full rounded-full h-2 mt-2" style="background-color: ${config.background_color || defaultConfig.background_color};">
+                                <div class="h-2 rounded-full transition-all" 
+                                     style="width: ${((appState.currentGrammarIndex + 1) / comprehensiveTest.length) * 100}%; background-color: ${config.primary_action_color || defaultConfig.primary_action_color};">
                                 </div>
                             </div>
-                        `).join('')}
+                        </div>
+                        
+                        <div class="p-6 sm:p-8 rounded-xl shadow-lg mb-6" 
+                             style="background-color: ${config.surface_color || defaultConfig.surface_color};">
+                            <div class="font-bold mb-6 text-center" 
+                                 style="font-size: ${baseSize * 1.5}px; color: ${config.primary_action_color || defaultConfig.primary_action_color};">
+                                ${question.question}
+                            </div>
+                            
+                            <div class="space-y-3">
+                                ${question.options.map((option, optIdx) => {
+                                    const isSelected = appState.grammarAnswers[appState.currentGrammarIndex] === optIdx;
+                                    const isCorrect = optIdx === question.correct;
+                                    const showResult = appState.grammarAnswers[appState.currentGrammarIndex] !== undefined;
+                                    
+                                    let bgColor = config.surface_color || defaultConfig.surface_color;
+                                    let borderColor = 'transparent';
+                                    
+                                    if (showResult) {
+                                        if (isCorrect) {
+                                            bgColor = '#10b981';
+                                        } else if (isSelected) {
+                                            bgColor = '#ef4444';
+                                        }
+                                    } else if (isSelected) {
+                                        bgColor = config.primary_action_color || defaultConfig.primary_action_color;
+                                        borderColor = config.primary_action_color || defaultConfig.primary_action_color;
+                                    } else {
+                                        borderColor = config.background_color || defaultConfig.background_color;
+                                    }
+                                    
+                                    return `
+                                        <button onclick="selectGrammarAnswer(${appState.currentGrammarIndex}, ${optIdx})"
+                                                ${showResult ? 'disabled' : ''}
+                                                class="w-full text-left p-4 rounded-lg transition-all transform hover:scale-105"
+                                                style="background-color: ${bgColor}; 
+                                                       color: ${showResult || isSelected ? 'white' : (config.text_color || defaultConfig.text_color)}; 
+                                                       font-size: ${baseSize}px; 
+                                                       border: 2px solid ${borderColor};
+                                                       box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                                            ${String.fromCharCode(65 + optIdx)}. ${option}
+                                            ${showResult && isCorrect ? ' ✓' : ''}
+                                            ${showResult && isSelected && !isCorrect ? ' ✗' : ''}
+                                        </button>
+                                    `;
+                                }).join('')}
+                            </div>
+                            
+                            ${appState.grammarAnswers[appState.currentGrammarIndex] !== undefined ? `
+                                <div class="mt-6 p-4 rounded-lg text-center" 
+                                     style="background-color: ${appState.grammarAnswers[appState.currentGrammarIndex] === question.correct ? '#dcfce7' : '#fef2f2'}; 
+                                            color: ${appState.grammarAnswers[appState.currentGrammarIndex] === question.correct ? '#166534' : '#991b1b'}; 
+                                            font-size: ${baseSize}px;">
+                                    ${appState.grammarAnswers[appState.currentGrammarIndex] === question.correct ? 
+                                        '🎉 Chính xác! Bạn đã trả lời đúng.' : 
+                                        '❌ Sai rồi. Đáp án đúng là: ' + question.options[question.correct]}
+                                </div>
+                            ` : ''}
+                        </div>
+                        
+                        <div class="flex justify-between items-center gap-4">
+                            <button onclick="previousGrammar()" 
+                                    ${appState.currentGrammarIndex === 0 ? 'disabled' : ''}
+                                    class="px-6 py-3 rounded-lg font-medium transition-colors disabled:opacity-50"
+                                    style="background-color: ${config.secondary_action_color || defaultConfig.secondary_action_color}; color: white; font-size: ${baseSize}px;">
+                                ← Câu trước
+                            </button>
+                            
+                            <div class="text-center" style="font-size: ${baseSize * 0.875}px; color: ${config.text_color || defaultConfig.text_color}; opacity: 0.7;">
+                                Đã trả lời: ${Object.keys(appState.grammarAnswers).length}/${comprehensiveTest.length}
+                            </div>
+                            
+                            <button onclick="nextGrammar()" 
+                                    ${appState.currentGrammarIndex === comprehensiveTest.length - 1 ? 'disabled' : ''}
+                                    class="px-6 py-3 rounded-lg font-medium transition-colors disabled:opacity-50"
+                                    style="background-color: ${config.secondary_action_color || defaultConfig.secondary_action_color}; color: white; font-size: ${baseSize}px;">
+                                Câu tiếp →
+                            </button>
+                        </div>
                     </div>
                 `;
             }
@@ -1941,6 +2030,22 @@ Online education also provides access to vast amounts of <span class="highlight"
             }
         }
 
+        async function nextGrammar() {
+            if (appState.currentGrammarIndex < comprehensiveTest.length - 1) {
+                appState.currentGrammarIndex++;
+                await updateProgress();
+                renderApp();
+            }
+        }
+
+        async function previousGrammar() {
+            if (appState.currentGrammarIndex > 0) {
+                appState.currentGrammarIndex--;
+                await updateProgress();
+                renderApp();
+            }
+        }
+
         function setupKeyboardListeners() {
             // Remove existing listeners to prevent duplicates
             document.removeEventListener('keydown', handleKeydown);
@@ -2100,5 +2205,5 @@ Online education also provides access to vast amounts of <span class="highlight"
             }
         }, 2000);
     </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'997c1ba482f18936',t:'MTc2MjAwNzYxNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99e00885755a40d9',t:'MTc2MzA1NTQwNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
